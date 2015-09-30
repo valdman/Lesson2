@@ -1,0 +1,11 @@
+\\psf\Home\Documents\Git\Lesson2\Lesson2\bin\Debug\Lesson2.exe.config
+\\psf\Home\Documents\Git\Lesson2\Lesson2\obj\Debug\Lesson2.csprojResolveAssemblyReference.cache
+\\psf\Home\Documents\Git\Lesson2\Lesson2\obj\Debug\Lesson2.CarRent.resources
+\\psf\Home\Documents\Git\Lesson2\Lesson2\obj\Debug\Lesson2.Properties.Resources.resources
+\\psf\Home\Documents\Git\Lesson2\Lesson2\obj\Debug\Lesson2.csproj.GenerateResource.Cache
+\\psf\Home\Documents\Git\Lesson2\Lesson2\bin\Debug\Lesson2.exe
+\\psf\Home\Documents\Git\Lesson2\Lesson2\bin\Debug\Lesson2.pdb
+\\psf\Home\Documents\Git\Lesson2\Lesson2\bin\Debug\Newtonsoft.Json.dll
+\\psf\Home\Documents\Git\Lesson2\Lesson2\bin\Debug\Newtonsoft.Json.xml
+\\psf\Home\Documents\Git\Lesson2\Lesson2\obj\Debug\Lesson2.exe
+\\psf\Home\Documents\Git\Lesson2\Lesson2\obj\Debug\Lesson2.pdb

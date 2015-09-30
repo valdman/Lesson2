@@ -1,0 +1,3 @@
+/Users/boris/Documents/Git/Lesson2/Lesson2/obj/Debug/.NETFramework,Version=v4.5.1.AssemblyAttribute.cs
+/Users/boris/Documents/Git/Lesson2/Lesson2/obj/Debug/Lesson2.CarRent.resources
+/Users/boris/Documents/Git/Lesson2/Lesson2/obj/Debug/Lesson2.Properties.Resources.resources
