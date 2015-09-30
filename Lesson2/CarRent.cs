@@ -34,15 +34,13 @@ namespace Lesson2
         {
             var selectedDate1 = dateTimePicker1.Value;
             currentDate = selectedDate1;
+            dateTimePicker1.Value = dateTimePicker1.Value > currentDate ? currentDate : dateTimePicker1.Value;
         }
 
         private void dateTimePicker2_ValueChanged(object sender, System.EventArgs e)
         {
             var selectedData2 = dateTimePicker2.Value;
-            if(selectedData2 < currentDate)
-            {
-                dateTimePicker2.Value = currentDate;
-            }
+            dateTimePicker2.Value = dateTimePicker2.Value < currentDate ? currentDate : dateTimePicker2.Value;
 
             
         }
