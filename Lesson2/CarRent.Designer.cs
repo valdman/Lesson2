@@ -99,6 +99,7 @@
             this.MakeAnOrderButton.TabIndex = 6;
             this.MakeAnOrderButton.Text = "Make An Order";
             this.MakeAnOrderButton.UseVisualStyleBackColor = true;
+            this.MakeAnOrderButton.Click += new System.EventHandler(this.MakeAnOrderButton_Click);
             // 
             // CarRent
             // 

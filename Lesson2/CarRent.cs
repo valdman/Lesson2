@@ -9,10 +9,11 @@ namespace Lesson2
 			InitializeComponent();
 		}
 
+        private Car _selectedCar = new Car("","");
         private void CarList_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            var selectedCar = CarList.SelectedItem as Car;
-            CarDescription.Text = selectedCar.GetDescription();
+            _selectedCar = CarList.SelectedItem as Car;
+            CarDescription.Text = _selectedCar.GetDescription();
         }
 
         private void CarRent_Load(object sender, System.EventArgs e)
@@ -29,17 +30,26 @@ namespace Lesson2
             CarList.Items.AddRange(cars);
         }
 
+        private System.DateTime _DateOfBegin = new System.DateTime();
+        private System.DateTime _DateOfEnd = new System.DateTime();
+
+
         private void dateTimePicker1_ValueChanged(object sender, System.EventArgs e)
         {
             dateTimePicker2.Value = dateTimePicker1.Value > dateTimePicker2.Value ? dateTimePicker1.Value : dateTimePicker2.Value;
+            _DateOfBegin = dateTimePicker1.Value;
         }
 
         private void dateTimePicker2_ValueChanged(object sender, System.EventArgs e)
         {
             dateTimePicker1.Value = dateTimePicker1.Value > dateTimePicker2.Value ? dateTimePicker2.Value : dateTimePicker1.Value;
+            _DateOfEnd = dateTimePicker2.Value;
 
+        }
 
-
+        private void MakeAnOrderButton_Click(object sender, System.EventArgs e)
+        {
+            //DoAnOrder(Car _selectedCar, System.DateTime _DateOfBegin, System.DateTime _DateOfEnd);
         }
     }
 }
