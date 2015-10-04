@@ -27,7 +27,8 @@ namespace Lesson2
                 new Car("Жигуль", "Ведро с гайками")
             };
 
-            CarList.Items.AddRange(cars);
+            CarService Service = new CarService();
+            CarList.Items.AddRange(Service.GetAviableCars(cars, _DateOfBegin, _DateOfEnd));
         }
 
         private System.DateTime _DateOfBegin = new System.DateTime();
@@ -49,7 +50,9 @@ namespace Lesson2
 
         private void MakeAnOrderButton_Click(object sender, System.EventArgs e)
         {
-            //DoAnOrder(Car _selectedCar, System.DateTime _DateOfBegin, System.DateTime _DateOfEnd);
+            Rent OrderParams = new Rent(_selectedCar, _DateOfBegin, _DateOfEnd);
+            CarService service = new CarService();
+            service.DoAnOrder(OrderParams);
         }
     }
 }

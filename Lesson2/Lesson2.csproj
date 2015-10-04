@@ -60,6 +60,7 @@
     <Compile Include="FileDatabase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rent.cs" />
     <Compile Include="Samples\Classes.cs" />
     <Compile Include="Samples\ClassUsage.cs" />
     <EmbeddedResource Include="CarRent.resx">

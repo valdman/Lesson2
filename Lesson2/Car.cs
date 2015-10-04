@@ -16,7 +16,7 @@
             return _name;
         }
 
-        private string _name;
-        private string _description;
+        protected string _name;
+        protected string _description;
     }
 }
