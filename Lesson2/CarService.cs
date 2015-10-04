@@ -6,6 +6,7 @@ namespace Lesson2
     class CarService
     {
         FileDatabase db;
+        Rent[] PreventiveDB = new Rent[0];
         Car[] cars = new Car[]
             {
                 new Car("БМВ", "Классная машина"),
@@ -18,6 +19,7 @@ namespace Lesson2
         public CarService()
         {
             db = new FileDatabase("C:\\CarRent");
+            PreventiveDB = db.GetFromDatabase<Rent>();
         }
 
         public Car[] GetAviableCars( DateTime DateOfBegin, DateTime DateOfEnd)
@@ -40,12 +42,13 @@ namespace Lesson2
 
         public void DoAnOrder(Rent OrderParams)
         {
-            Rent[] OldArrOfRents = db.GetFromDatabase<Rent>();
+            Rent[] OldArrOfRents = PreventiveDB;
             Rent[] NewArrOfRents = new Rent[OldArrOfRents.GetLength(0) + 1];
             int i;
             for (i = 0; i < OldArrOfRents.GetLength(0); ++i) 
                 NewArrOfRents[i] = OldArrOfRents[i];
             NewArrOfRents[i] = OrderParams;
+            PreventiveDB = NewArrOfRents;
             db.SaveToDatabase<Rent>(NewArrOfRents);
         }
          
@@ -53,7 +56,7 @@ namespace Lesson2
         {
             SortedSet<Car> SetOfNotAviableCars = new SortedSet<Car>();
             int NumberOfNotAviableCars = 0;
-            foreach (Rent iRent in db.GetFromDatabase<Rent>())
+            foreach (Rent iRent in PreventiveDB)
                 if (iRent.GetDateOfEndRent() > DateOfBegin || iRent.GetDateOfBeginRent() < DateOfEnd) {
                     SetOfNotAviableCars.Add(iRent.GetRentedCar());
                     NumberOfNotAviableCars++;
