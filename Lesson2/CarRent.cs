@@ -31,6 +31,7 @@ namespace Lesson2
         private void dateTimePicker1_ValueChanged(object sender, System.EventArgs e)
         {
             dateTimePicker2.Value = dateTimePicker1.Value > dateTimePicker2.Value ? dateTimePicker1.Value : dateTimePicker2.Value;
+            _DateOfEnd = dateTimePicker2.Value;
             _DateOfBegin = dateTimePicker1.Value;
         }
 
@@ -38,6 +39,7 @@ namespace Lesson2
         {
             dateTimePicker1.Value = dateTimePicker1.Value > dateTimePicker2.Value ? dateTimePicker2.Value : dateTimePicker1.Value;
             _DateOfEnd = dateTimePicker2.Value;
+            _DateOfBegin = dateTimePicker1.Value;
 
         }
 
