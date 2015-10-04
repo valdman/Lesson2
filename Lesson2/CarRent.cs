@@ -4,10 +4,13 @@ namespace Lesson2
 {
 	public partial class CarRent : Form
 	{
-		public CarRent()
+
+        CarService service;
+        public CarRent()
 		{
 			InitializeComponent();
-		}
+            service = new CarService();
+        }
 
         private Car _selectedCar = new Car("","");
         private void CarList_SelectedIndexChanged(object sender, System.EventArgs e)
@@ -27,8 +30,7 @@ namespace Lesson2
                 new Car("Жигуль", "Ведро с гайками")
             };
 
-            CarService Service = new CarService();
-            CarList.Items.AddRange(Service.GetAviableCars(cars, _DateOfBegin, _DateOfEnd));
+            CarList.Items.AddRange(service.GetAviableCars(cars, _DateOfBegin, _DateOfEnd));
         }
 
         private System.DateTime _DateOfBegin = new System.DateTime();
@@ -51,7 +53,6 @@ namespace Lesson2
         private void MakeAnOrderButton_Click(object sender, System.EventArgs e)
         {
             Rent OrderParams = new Rent(_selectedCar, _DateOfBegin, _DateOfEnd);
-            CarService service = new CarService();
             service.DoAnOrder(OrderParams);
         }
     }
