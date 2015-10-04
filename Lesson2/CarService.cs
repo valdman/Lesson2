@@ -8,7 +8,7 @@ namespace Lesson2
         FileDatabase db;
         public CarService()
         {
-            db = new FileDatabase("/%USERPROFILE%/Documents/CarRent");
+            db = new FileDatabase("C:\\CarRent");
         }
 
         public Car[] GetAviableCars(Car[] cars, DateTime DateOfBegin, DateTime DateOfEnd)

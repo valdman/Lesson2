@@ -10,6 +10,8 @@
 
         public string GetName() { return _name; }
         public string GetDescription() { return _description; }
+        public string Name { get { return _name; } }
+        public string Description { get { return _description; } }
 
         public override string ToString()
         {
