@@ -44,6 +44,7 @@ namespace Lesson2
             for (i = 0; i < OldArrOfRents.GetLength(0); ++i) 
                 NewArrOfRents[i] = OldArrOfRents[i];
             NewArrOfRents[i] = OrderParams;
+            db.SaveToDatabase<Rent>(NewArrOfRents);
         }
             
     }
