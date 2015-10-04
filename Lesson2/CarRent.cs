@@ -21,16 +21,7 @@ namespace Lesson2
 
         private void CarRent_Load(object sender, System.EventArgs e)
         {
-            Car[] cars = new Car[]
-            {
-                new Car("БМВ", "Классная машина"),
-                new Car("Ауди", "Отличная машина"),
-                new Car("Фольксваген", "Прекрасная машина"),
-                new Car("Лада", "Машина"),
-                new Car("Жигуль", "Ведро с гайками")
-            };
-
-            CarList.Items.AddRange(service.GetAviableCars(cars, _DateOfBegin, _DateOfEnd));
+            CarList.Items.AddRange(service.GetAviableCars(_DateOfBegin, _DateOfEnd));
         }
 
         private System.DateTime _DateOfBegin = new System.DateTime();

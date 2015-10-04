@@ -6,25 +6,27 @@ namespace Lesson2
     class CarService
     {
         FileDatabase db;
+        Car[] cars = new Car[]
+            {
+                new Car("БМВ", "Классная машина"),
+                new Car("Ауди", "Отличная машина"),
+                new Car("Фольксваген", "Прекрасная машина"),
+                new Car("Лада", "Машина"),
+                new Car("Жигуль", "Ведро с гайками")
+            };
+
         public CarService()
         {
             db = new FileDatabase("C:\\CarRent");
         }
 
-        public Car[] GetAviableCars(Car[] cars, DateTime DateOfBegin, DateTime DateOfEnd)
+        public Car[] GetAviableCars( DateTime DateOfBegin, DateTime DateOfEnd)
         {
-            SortedSet<Car> SetOfNotAviableCars = new SortedSet<Car>();
+            SortedSet<Car> SetOfNotAviableCars = GetNotAviableCars(DateOfBegin, DateOfEnd);
 
-            int NumberOfNotAviableCars = 0;
-            foreach (Rent iRent in db.GetFromDatabase<Rent>())
-                if (iRent.GetDateOfEndRent() > DateOfBegin || iRent.GetDateOfBeginRent() < DateOfEnd) {
-                    SetOfNotAviableCars.Add(iRent.GetRentedCar());
-                    NumberOfNotAviableCars++;
-                }
+            int NumberOfAviableCar = cars.GetLength(0) - SetOfNotAviableCars.Count;
 
-
-            int NumberOfAviableCars = cars.GetLength(0) - NumberOfNotAviableCars;
-            Car[] AviableCars = new Car[NumberOfAviableCars];
+            Car[] AviableCars = new Car[NumberOfAviableCar];
 
             int i = 0;
             foreach (Car CheckedCar in cars)
@@ -46,6 +48,19 @@ namespace Lesson2
             NewArrOfRents[i] = OrderParams;
             db.SaveToDatabase<Rent>(NewArrOfRents);
         }
-            
+         
+        private SortedSet<Car> GetNotAviableCars(System.DateTime DateOfBegin, System.DateTime DateOfEnd)
+        {
+            SortedSet<Car> SetOfNotAviableCars = new SortedSet<Car>();
+            int NumberOfNotAviableCars = 0;
+            foreach (Rent iRent in db.GetFromDatabase<Rent>())
+                if (iRent.GetDateOfEndRent() > DateOfBegin || iRent.GetDateOfBeginRent() < DateOfEnd) {
+                    SetOfNotAviableCars.Add(iRent.GetRentedCar());
+                    NumberOfNotAviableCars++;
+                }
+
+            return (SetOfNotAviableCars);
+        }
+
     }
 }
