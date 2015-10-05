@@ -10,6 +10,8 @@ namespace Lesson2
 		{
 			InitializeComponent();
             service = new CarService();
+            _DateOfBegin = dateTimePicker1.Value;
+            _DateOfEnd = dateTimePicker2.Value;
         }
 
         private Car _selectedCar = new Car("","");
