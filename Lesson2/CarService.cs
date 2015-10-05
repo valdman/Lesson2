@@ -57,7 +57,10 @@ namespace Lesson2
             SortedSet<Car> SetOfNotAviableCars = new SortedSet<Car>(new CarComparer());
             int NumberOfNotAviableCars = 0;
             foreach (Rent iRent in PreventiveDB)
-                if (iRent.GetDateOfEndRent() > DateOfBegin || iRent.GetDateOfBeginRent() < DateOfEnd) {
+                if ( (iRent.GetDateOfEndRent() > DateOfBegin && iRent.GetDateOfBeginRent() < DateOfBegin)
+                    || (iRent.GetDateOfEndRent() > DateOfEnd && iRent.GetDateOfBeginRent() < DateOfEnd)
+                        || ( DateOfBegin < iRent.GetDateOfBeginRent() && DateOfEnd > iRent.GetDateOfEndRent() ) )
+                {
                     SetOfNotAviableCars.Add(iRent.GetRentedCar());
                     NumberOfNotAviableCars++;
                 }
