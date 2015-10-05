@@ -21,7 +21,7 @@ namespace Lesson2
 
         private void CarRent_Load(object sender, System.EventArgs e)
         {
-            CarList.Items.AddRange(service.GetAviableCars(_DateOfBegin, _DateOfEnd));
+            ReloadCarList();
         }
 
         private System.DateTime _DateOfBegin = new System.DateTime();
@@ -33,6 +33,7 @@ namespace Lesson2
             dateTimePicker2.Value = dateTimePicker1.Value > dateTimePicker2.Value ? dateTimePicker1.Value : dateTimePicker2.Value;
             _DateOfEnd = dateTimePicker2.Value;
             _DateOfBegin = dateTimePicker1.Value;
+            ReloadCarList();
         }
 
         private void dateTimePicker2_ValueChanged(object sender, System.EventArgs e)
@@ -40,6 +41,7 @@ namespace Lesson2
             dateTimePicker1.Value = dateTimePicker1.Value > dateTimePicker2.Value ? dateTimePicker2.Value : dateTimePicker1.Value;
             _DateOfEnd = dateTimePicker2.Value;
             _DateOfBegin = dateTimePicker1.Value;
+            ReloadCarList();
 
         }
 
@@ -47,6 +49,13 @@ namespace Lesson2
         {
             Rent OrderParams = new Rent(_selectedCar, _DateOfBegin, _DateOfEnd);
             service.DoAnOrder(OrderParams);
+            ReloadCarList();
+        }
+
+        private void ReloadCarList()
+        {
+            CarList.Items.Clear();
+            CarList.Items.AddRange(service.GetAviableCars(_DateOfBegin, _DateOfEnd));
         }
     }
 }

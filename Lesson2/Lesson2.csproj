@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarComparer.cs" />
     <Compile Include="CarRent.cs">
       <SubType>Form</SubType>
     </Compile>
