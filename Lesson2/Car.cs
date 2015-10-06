@@ -2,14 +2,12 @@
 {
     class Car
     {
-        public Car(string name, string description)
+        public Car(string Name, string Description)
         {
-            _name = name;
-            _description = description;
+            _name = Name;
+            _description = Description;
         }
 
-        public string GetName() { return _name; }
-        public string GetDescription() { return _description; }
         public string Name { get { return _name; } }
         public string Description { get { return _description; } }
 

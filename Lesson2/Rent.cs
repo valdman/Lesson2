@@ -2,16 +2,12 @@
 {
     class Rent
     {
-        public Rent(Car CarToRent, System.DateTime WhishableDateOfBegin, System.DateTime WhishableDateOfEnd)
+        public Rent(Car CarToRent, System.DateTime DateOfBeginRent, System.DateTime DateOfEndRent)
         {
             _RentedCar = CarToRent;
-            _BeginOfRent = WhishableDateOfBegin;
-            _EndOfRent = WhishableDateOfEnd;
+            _BeginOfRent = DateOfBeginRent;
+            _EndOfRent = DateOfEndRent;
         }
-
-        public Car GetRentedCar() { return _RentedCar; }
-        public System.DateTime GetDateOfBeginRent() { return _BeginOfRent; }
-        public System.DateTime GetDateOfEndRent() { return _EndOfRent; }
 
         public Car CarToRent { get { return _RentedCar; } }
         public System.DateTime DateOfEndRent { get { return _EndOfRent; } }

@@ -18,7 +18,7 @@ namespace Lesson2
         private void CarList_SelectedIndexChanged(object sender, System.EventArgs e)
         {
             _selectedCar = CarList.SelectedItem as Car;
-            CarDescription.Text = _selectedCar.GetDescription();
+            CarDescription.Text = _selectedCar.Description;
         }
 
         private void CarRent_Load(object sender, System.EventArgs e)
