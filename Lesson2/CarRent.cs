@@ -58,6 +58,7 @@ namespace Lesson2
         {
             CarList.Items.Clear();
             CarList.Items.AddRange(service.GetAviableCars(_DateOfBegin, _DateOfEnd));
+            CarList.SelectedItem = CarList.Items[0];
         }
     }
 }
