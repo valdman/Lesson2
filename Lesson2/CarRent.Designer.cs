@@ -49,6 +49,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(244, 62);
+            this.dateTimePicker1.MinDate = new System.DateTime(2015, 10, 7, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 1;
@@ -57,9 +58,11 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(244, 126);
+            this.dateTimePicker2.MinDate = new System.DateTime(2015, 10, 7, 17, 19, 19, 0);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker2.TabIndex = 2;
+            this.dateTimePicker2.Value = new System.DateTime(2015, 10, 7, 17, 19, 19, 0);
             this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // FromLabel

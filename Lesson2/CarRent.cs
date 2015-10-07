@@ -60,5 +60,19 @@ namespace Lesson2
             CarList.Items.AddRange(service.GetAviableCars(_DateOfBegin, _DateOfEnd));
             CarList.SelectedItem = CarList.Items[0];
         }
+
+        //private System.DateTime CorrectTime(System.DateTime OrderTime, bool IsEndOfOrder)
+        //{
+        //    if( OrderTime.Date == System.DateTime.Today && IsEndOfOrder || OrderTime > System.DateTime.Today )
+        //    {
+        //        System.DateTime RightTime = OrderTime;
+        //        RightTime.AddHours(23 - OrderTime.Hour);
+        //        RightTime.AddMinutes(59 - OrderTime.Minute);
+        //        RightTime.AddSeconds(59 - OrderTime.Second);
+        //        return (RightTime);
+        //    }
+        //    if(OrderTime.Date > System.DateTime.Today && !IsEndOfOrder)
+
+        //}
     }
 }

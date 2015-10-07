@@ -1,8 +1,9 @@
 ﻿<Properties StartupItem="Lesson2/Lesson2.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Lesson2/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Lesson2/Rent.cs">
     <Files>
-      <File FileName="Lesson2/Program.cs" Line="21" Column="1" />
+      <File FileName="Lesson2/Program.cs" Line="18" Column="4" />
+      <File FileName="Lesson2/Rent.cs" Line="20" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
