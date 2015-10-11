@@ -9,3 +9,15 @@
 \\psf\Home\Documents\Git\Lesson2\Lesson2\bin\Debug\Newtonsoft.Json.xml
 \\psf\Home\Documents\Git\Lesson2\Lesson2\obj\Debug\Lesson2.exe
 \\psf\Home\Documents\Git\Lesson2\Lesson2\obj\Debug\Lesson2.pdb
+Y:\Documents\Git\Lesson2\Lesson2\bin\Debug\Lesson2.exe.config
+Y:\Documents\Git\Lesson2\Lesson2\obj\Debug\Lesson2.exe
+Y:\Documents\Git\Lesson2\Lesson2\obj\Debug\Lesson2.pdb
+Y:\Documents\Git\Lesson2\Lesson2\bin\Debug\Lesson2.exe
+Y:\Documents\Git\Lesson2\Lesson2\bin\Debug\Lesson2.pdb
+Y:\Documents\Git\Lesson2\Lesson2\bin\Debug\Newtonsoft.Json.dll
+Y:\Documents\Git\Lesson2\Lesson2\bin\Debug\Newtonsoft.Json.xml
+Y:\Documents\Git\Lesson2\Lesson2\obj\Debug\Lesson2.csprojResolveAssemblyReference.cache
+Y:\Documents\Git\Lesson2\Lesson2\obj\Debug\Lesson2.AdminPanel.resources
+Y:\Documents\Git\Lesson2\Lesson2\obj\Debug\Lesson2.CarRent.resources
+Y:\Documents\Git\Lesson2\Lesson2\obj\Debug\Lesson2.Properties.Resources.resources
+Y:\Documents\Git\Lesson2\Lesson2\obj\Debug\Lesson2.csproj.GenerateResource.Cache

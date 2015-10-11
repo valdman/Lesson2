@@ -5,7 +5,7 @@ namespace Lesson2
 {
     class CarService
     {
-        FileDatabase db;
+        FileDatabase db { get; }
         Rent[] PreventiveDB = new Rent[0];
         Car[] cars = new Car[]
             {

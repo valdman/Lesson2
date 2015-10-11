@@ -35,6 +35,7 @@
             this.ToLabel = new System.Windows.Forms.Label();
             this.CarDescription = new System.Windows.Forms.RichTextBox();
             this.MakeAnOrderButton = new System.Windows.Forms.Button();
+            this.adminButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CarList
@@ -104,12 +105,23 @@
             this.MakeAnOrderButton.UseVisualStyleBackColor = true;
             this.MakeAnOrderButton.Click += new System.EventHandler(this.MakeAnOrderButton_Click);
             // 
+            // adminButton
+            // 
+            this.adminButton.Location = new System.Drawing.Point(406, 1);
+            this.adminButton.Name = "adminButton";
+            this.adminButton.Size = new System.Drawing.Size(49, 20);
+            this.adminButton.TabIndex = 7;
+            this.adminButton.Text = "Админ";
+            this.adminButton.UseVisualStyleBackColor = true;
+            this.adminButton.Click += new System.EventHandler(this.adminButton_Click);
+            // 
             // CarRent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(456, 390);
+            this.Controls.Add(this.adminButton);
             this.Controls.Add(this.MakeAnOrderButton);
             this.Controls.Add(this.CarDescription);
             this.Controls.Add(this.ToLabel);
@@ -117,8 +129,11 @@
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.CarList);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(472, 428);
+            this.MinimumSize = new System.Drawing.Size(472, 428);
             this.Name = "CarRent";
-            this.Text = "CarRent";
+            this.Text = "Аренда машин";
             this.Load += new System.EventHandler(this.CarRent_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -134,6 +149,7 @@
 		private System.Windows.Forms.Label ToLabel;
 		private System.Windows.Forms.RichTextBox CarDescription;
 		private System.Windows.Forms.Button MakeAnOrderButton;
-	}
+        private System.Windows.Forms.Button adminButton;
+    }
 }
 

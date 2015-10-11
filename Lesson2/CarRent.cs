@@ -12,6 +12,9 @@ namespace Lesson2
             service = new CarService();
             _DateOfBegin = dateTimePicker1.Value;
             _DateOfEnd = dateTimePicker2.Value;
+            dateTimePicker1.MinDate = System.DateTime.Today;
+            dateTimePicker2.MinDate = System.DateTime.Today;
+
         }
 
         private Car _selectedCar = new Car("","");
@@ -59,6 +62,11 @@ namespace Lesson2
             CarList.Items.Clear();
             CarList.Items.AddRange(service.GetAviableCars(_DateOfBegin, _DateOfEnd));
             CarList.SelectedItem = CarList.Items[0];
+        }
+
+        private void adminButton_Click(object sender, System.EventArgs e)
+        {
+            (new AdminPanel(service)).ShowDialog();
         }
 
         //private System.DateTime CorrectTime(System.DateTime OrderTime, bool IsEndOfOrder)

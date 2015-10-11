@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel.Designer.cs">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="CarComparer.cs" />
     <Compile Include="CarRent.cs">
       <SubType>Form</SubType>
@@ -64,6 +70,9 @@
     <Compile Include="Rent.cs" />
     <Compile Include="Samples\Classes.cs" />
     <Compile Include="Samples\ClassUsage.cs" />
+    <EmbeddedResource Include="AdminPanel.resx">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CarRent.resx">
       <DependentUpon>CarRent.cs</DependentUpon>
     </EmbeddedResource>
